@@ -1,0 +1,31 @@
+\documentclass[twocolumn]{revtex4}
+
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{
+Chance of Rain Experiment
+}
+
+\author{Z.~Morton}
+\affiliation{Siena College, Loudonville, NY}
+
+\date{\today}
+
+\begin{abstract}
+	For this project, I decided to predict the weather using Monte Carlo. My motivation for this project was my curiousity in trying to see what the chances were of it raining on certain days of the month. This was calculated through use of the Monte Carlo method.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+	In order to find the chance it would rain on one and only one day in a month if the chance it would rain on any given day was twenty percent. I started off making several functions, the first of which set a variable set equal to a generated random number between 0 and 1, and a second variable was set equal to 0, and I then checked if the generated number was greater than 0 but less than .2. Then if the empty list was equal to 1, the function returned a value of 1. If not, it would return a value of 0. 
+The second function I made first set a variable equal to 30, which was the approximate number of days in a month. Then I set a variable equal to an empty list, and then I looped over it 30 times. I then set a variable equal to the first function to call it, Then I made a function to add the value obtained by the first function to the empty list. Then, if the total of the numbers in the empty list was equal to 1, the function would return a value of 1. Otherwise, it would return a value of 0. 
+ After that I set a variable equal to one million, and used that as the number of times the function would loop over. I then set another variable equal to an empty list and looped over the variable one million times. I set a variable equal to the value returned by the second function, and then added that value to the empty list each time the loop was run. after this loop was finished, I added all of the numbers together that were in the list I just used and set the sum equal to a variable, and printed the variable. This came out to be a little over nine thousand each time the code was run. Finally, I set another variable equal to the sum of the numbers in the list divided by the number of times the loop was run to get the chance that it would ran on one and only one day in a month.
+	In order to find the odds it would rain at leat 8 days in any order in a given month, the same method as above was used. However, several variables were changed. Instead of checking to see if the random number generated in the first function was greater than 0 but less than .2, it was checked if it was greater than zero but less than .1 due to the lower chance in this problem. Additionally, in the second function of this problem, the total sum of the numbers in the empty list had to be greater than or equal to 8 in order to return a value of 1, instead of needing to be equal to 1.  After looping the for loop one million times, the result was roughly almost 8000, but on average it was slightly lower.
+	
+\section{Other Stuff}
+	For problem 3, i wasnt exactly sure how to go about doing this part of the problem. However, I did make a histogram for average rainfall that I believed would actually be close to the accepted value. First I set a variable to generate data to make the histogram look like a bell curve. I then plotted the value of the variable I set, labeled the y axis as Number of Months, and the x-axis as Amount of Rainfall in cm, and set the range from 0 to 10.
+	To find the average, I set a variable equal to the sum of the generated data, then set another variable equal to the first variable divided by the length of the data generating variable.
+
+\end{document}
